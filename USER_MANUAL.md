@@ -432,13 +432,22 @@ This is the same endpoint the frontend uses on page load to decide whether to sh
    - Connect edge device IP and view dashboard.
    - Watch events list, charts, and tower status update as the edge device sends alerts and heartbeats.
 
-This manual should give you concrete, end-to-end steps to run the system, log in as a user, and connect the Raspberry Pi edge device so that everything works together. 
+This manual gives you concrete, end-to-end steps to run the system, log in as a user, and connect the Raspberry Pi edge device so that everything works together.
 
+---
 
-cd ..
-python -m backend.app
+## 6. Firewall Configuration (Allow Edge Device to Laptop)
 
- netsh advfirewall firewall add rule name="Smart Streetlight Backend Port 5000" dir=in action=allow protocol=TCP localport=5000                                    
->>                                                                                                                                              
+If the edge device cannot send alerts or upload videos to the laptop backend, Windows Firewall is likely blocking incoming TCP port 5000 connections.
 
+Run the following command in an **Administrator Command Prompt** or **Administrator PowerShell**:
 
+### Using `netsh` (Command Prompt / PowerShell):
+```cmd
+netsh advfirewall firewall add rule name="Smart Streetlight Backend Port 5000" dir=in action=allow protocol=TCP localport=5000
+```
+
+### Using PowerShell cmdlet:
+```powershell
+New-NetFirewallRule -DisplayName "Smart Streetlight Backend Port 5000" -Direction Inbound -LocalPort 5000 -Protocol TCP -Action Allow
+```

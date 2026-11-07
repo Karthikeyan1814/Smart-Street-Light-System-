@@ -10,8 +10,6 @@ lerna-debug.log*
 
 edge_device
 backend/venv
-backend/.env
-backend/storage
 node_modules
 dist
 .venv

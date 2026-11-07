@@ -37,11 +37,12 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Mount static frontend (serve built dist if available, else frontend root)
+    # Mount static frontend if available (e.g. built dist or unified deployment)
     frontend_path = BASE_DIR.parent / "frontend"
     dist_path = frontend_path / "dist"
-    static_frontend_dir = dist_path if dist_path.exists() else frontend_path
-    app.mount("/frontend", StaticFiles(directory=str(static_frontend_dir), html=True), name="frontend")
+    static_frontend_dir = dist_path if dist_path.exists() else (frontend_path if frontend_path.exists() else None)
+    if static_frontend_dir and static_frontend_dir.exists():
+        app.mount("/frontend", StaticFiles(directory=str(static_frontend_dir), html=True), name="frontend")
 
     # Serve storage directory (snapshots, models) as static files
     app.mount("/storage", StaticFiles(directory=str(STORAGE_DIR), html=False), name="storage")

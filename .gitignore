@@ -9,12 +9,10 @@ backend/venv/
 .env.*
 !.env.example
 backend/.env
+frontend/.env
 frontend/.env.local
-frontend/.env.development.local
-frontend/.env.production.local
-frontend/.env.test.local
 
-# Backend storage folder (databases, uploaded videos, snapshots)
+# Backend storage (databases, uploaded videos, snapshots)
 backend/storage/*.db
 backend/storage/*.sqlite3
 backend/storage/videos/*
@@ -22,7 +20,7 @@ backend/storage/videos/*
 backend/storage/snapshots/*
 !backend/storage/snapshots/.gitkeep
 
-# Edge device generated snapshots
+# Edge device runtime files
 edge_device/snapshots/*
 !edge_device/snapshots/.gitkeep
 
