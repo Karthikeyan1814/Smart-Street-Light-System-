@@ -1,0 +1,35 @@
+[
+  {
+    "confidence": 0.82,
+    "event_type": "Suspicious Activity",
+    "emotion": "Fear",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "tower_id": "TOWER_01",
+    "location": "College Main Road",
+    "llm_summary": "Incident detected at College Main Road (Tower TOWER_01) on 2024-01-15 10:30:00. Analysis indicates individuals showing signs of distress or fear with suspicious behavior patterns. Detection confidence: 82%. Event classification: Suspicious Activity with emotional state: Fear.",
+    "llm_action": "Immediate Response Required: Dispatch security personnel and notify emergency services. Increase lighting intensity to maximum.",
+    "processed_at": "2026-02-08T16:57:59.778560Z"
+  },
+  {
+    "tower_id": "TOWER_02",
+    "confidence": 0.95,
+    "event_type": "Emergency",
+    "location": "Park Avenue",
+    "emotion": "Fear",
+    "timestamp": "2026-02-08T17:00:22.990652Z",
+    "llm_summary": "Incident detected at Park Avenue (Tower TOWER_02) on 2026-02-08 17:00:22. Analysis indicates individuals showing signs of distress or fear with potential emergency situation. Detection confidence: 95%. Event classification: Emergency with emotional state: Fear.",
+    "llm_action": "Immediate Response Required: Dispatch security personnel and notify emergency services. Increase lighting intensity to maximum.",
+    "processed_at": "2026-02-08T17:00:22.990758Z"
+  },
+  {
+    "tower_id": "TOWER_02",
+    "confidence": 0.95,
+    "event_type": "Emergency",
+    "location": "Park Avenue",
+    "emotion": "Fear",
+    "timestamp": "2026-02-08T17:00:54.606410Z",
+    "llm_summary": "Incident detected at Park Avenue (Tower TOWER_02) on 2026-02-08 17:00:54. Analysis indicates individuals showing signs of distress or fear with potential emergency situation. Detection confidence: 95%. Event classification: Emergency with emotional state: Fear.",
+    "llm_action": "Immediate Response Required: Dispatch security personnel and notify emergency services. Increase lighting intensity to maximum.",
+    "processed_at": "2026-02-08T17:00:54.606474Z"
+  }
+]

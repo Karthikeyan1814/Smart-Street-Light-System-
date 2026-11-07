@@ -1,0 +1,50 @@
+# Python virtual environments
+.venv/
+venv/
+backend/.venv/
+backend/venv/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+
+# Backend storage folder (databases, uploaded videos, snapshots)
+backend/storage/*.db
+backend/storage/*.sqlite3
+backend/storage/videos/*
+!backend/storage/videos/.gitkeep
+backend/storage/snapshots/*
+!backend/storage/snapshots/.gitkeep
+
+# Edge device generated snapshots
+edge_device/snapshots/*
+!edge_device/snapshots/.gitkeep
+
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+backend/__pycache__/
+edge_device/__pycache__/
+
+# Log files
+*.log
+backend/logs/
+
+# Node modules and build output for frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Editor and system settings
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

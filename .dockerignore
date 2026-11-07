@@ -1,0 +1,35 @@
+# Virtual environments
+.venv/
+venv/
+*/.venv/
+*/venv/
+
+# Node modules
+node_modules/
+*/node_modules/
+dist/
+*/dist/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*/__pycache__/
+
+# Logs and databases
+*.log
+*/logs/
+backend/storage/*.db
+backend/storage/*.sqlite3
+backend/storage/videos/*
+backend/storage/snapshots/*
+
+# Git and OS metadata
+.git/
+.gitignore
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
